@@ -113,6 +113,8 @@ RUN apt-get update \
     && apt-get install npm -y \
     && git clone  https://github.com/mitre-attack/attack-navigator \
     && cd attack-navigator/nav-app \
+    && curl -fsSL https://deb.nodesource.com/setup_12.x | sudo -E bash - \
+    && apt-get install nodejs -y \
     && npm install --force \
     npm install -g @angular/cli
 
